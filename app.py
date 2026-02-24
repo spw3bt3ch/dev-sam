@@ -83,5 +83,10 @@ def index():
     return render_template("index.html", projects=projects, skills=skills, services=services)
 
 
+@app.route("/women-ai-training")
+def women_ai_training():
+    return render_template("women_ai_training.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
