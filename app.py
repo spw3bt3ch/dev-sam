@@ -20,7 +20,7 @@ def index():
             "technologies": ["Python", "Flask", "SQLite", "REST API", "JavaScript"],
             "github": "https://github.com/spw3bt3ch/finance-trkr",
             "demo": "https://github.com/spw3bt3ch/finance-trkr",
-            "image": "images/finance trckr.png",
+            "image": "images/finance-trckr.png",
         },
         {
             "title": "Portfolio Platform for Designers",
@@ -28,7 +28,7 @@ def index():
             "technologies": ["Python", "Flask", "Tailwind CSS", "SQLite", "Jinja2"],
             "github": "https://github.com/spw3bt3ch",
             "demo": "https://graphics-designers-portfolio-websit.vercel.app/",
-            "image": "images/graphics design.png",
+            "image": "images/graphics-design.png",
         },
         {
             "title": "Health Radar",
@@ -36,7 +36,7 @@ def index():
             "technologies": ["Python", "Flask", "SQLite", "Jinja2", "Bootstrap"],
             "github": "https://github.com/spw3bt3ch",
             "demo": "https://health-plus-v1u7.onrender.com/",
-            "image": "images/health radarr.png",
+            "image": "images/health-radarr.png",
         },
     ]
 
