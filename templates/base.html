@@ -60,6 +60,35 @@
     rel="stylesheet" />
 
   <style>
+    /* ── AI Training button animations ── */
+    @keyframes aiTrainGlow {
+      0%, 100% { box-shadow: 0 0 10px rgba(6,182,212,0.5), 0 0 20px rgba(59,130,246,0.3); }
+      50%       { box-shadow: 0 0 22px rgba(6,182,212,0.9), 0 0 40px rgba(139,92,246,0.5); }
+    }
+    @keyframes aiTrainGradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes aiTrainBounce {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-3px); }
+    }
+    .ai-train-btn {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6, #06b6d4);
+      background-size: 300% 300%;
+      animation:
+        aiTrainGradient 3s ease infinite,
+        aiTrainGlow 2s ease-in-out infinite,
+        aiTrainBounce 2.5s ease-in-out infinite;
+    }
+    .ai-train-btn:hover {
+      animation:
+        aiTrainGradient 1.5s ease infinite;
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(6,182,212,1), 0 0 60px rgba(59,130,246,0.6);
+    }
+
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
@@ -123,7 +152,7 @@
     aria-label="Main navigation">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
-      <a href="#hero" class="flex items-center gap-2 group" aria-label="Samuel Seye homepage">
+      <a href="/" class="flex items-center gap-2 group" aria-label="Samuel Seye homepage">
         <div
           class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-primary-500/30">
           S
@@ -135,8 +164,8 @@
 
       <!-- Desktop nav links -->
       <ul class="hidden md:flex items-center gap-8">
-        {% for label, anchor in [('About', '#about'), ('Skills', '#skills'), ('Projects', '#projects'), ('Services',
-        '#services'), ('Contact', '#contact')] %}
+        {% for label, anchor in [('About', '/#about'), ('Skills', '/#skills'), ('Projects', '/#projects'), ('Services',
+        '/#services'), ('Contact', '/#contact')] %}
         <li>
           <a href="{{ anchor }}"
             class="nav-link text-slate-400 hover:text-primary-400 text-sm font-medium transition-colors duration-200">
@@ -148,13 +177,12 @@
 
       <!-- CTA + hamburger -->
       <div class="flex items-center gap-3">
-        <!-- Women's AI Training special button -->
-        <a href="/women-ai-training"
-          class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-white text-sm font-bold transition-all duration-200 hover:scale-105 hover:opacity-90"
-          style="background: linear-gradient(135deg,#f43f8a,#a855f7); box-shadow: 0 0 16px rgba(244,63,138,0.45);">
-          <span>♀</span> Women's AI Training
+        <!-- Advanced AI Training button -->
+        <a href="/ai-training"
+          class="ai-train-btn hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-white text-sm font-bold">
+          <span>🤖</span> AI Training
         </a>
-        <a href="#contact"
+        <a href="/#contact"
           class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-semibold hover:opacity-90 shadow-lg shadow-primary-500/30 transition-all duration-200 hover:scale-105">
           Hire Me
         </a>
@@ -172,8 +200,8 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden mt-4 glass-card rounded-2xl p-6 mx-2">
       <ul class="flex flex-col gap-4">
-        {% for label, anchor in [('About', '#about'), ('Skills', '#skills'), ('Projects', '#projects'), ('Services',
-        '#services'), ('Contact', '#contact')] %}
+        {% for label, anchor in [('About', '/#about'), ('Skills', '/#skills'), ('Projects', '/#projects'), ('Services',
+        '/#services'), ('Contact', '/#contact')] %}
         <li>
           <a href="{{ anchor }}"
             class="mobile-nav-link text-slate-300 hover:text-primary-400 font-medium transition-colors duration-200 block py-1">
@@ -182,12 +210,12 @@
         </li>
         {% endfor %}
         <li class="pt-2 border-t border-white/10 space-y-3">
-          <a href="/women-ai-training"
+          <a href="/ai-training"
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-bold transition-all w-full justify-center hover:opacity-90"
-            style="background: linear-gradient(135deg,#f43f8a,#a855f7);">
-            <span>♀</span> Women's AI Training
+            style="background: linear-gradient(135deg,#06b6d4,#3b82f6,#8b5cf6);">
+            <span>🤖</span> AI Training
           </a>
-          <a href="#contact"
+          <a href="/#contact"
             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white text-sm font-semibold hover:opacity-90 transition-all w-full justify-center">
             Hire Me
           </a>
@@ -252,8 +280,6 @@
       <div class="mt-8 pt-6 border-t border-white/5 text-center">
         <p class="text-slate-500 text-sm">
           © 2026 Samuel Seye (SMI). All rights reserved.
-          <span class="mx-2">·</span>
-          Built with <span class="gradient-text font-semibold">Flask & Tailwind CSS</span>
         </p>
       </div>
     </div>
