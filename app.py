@@ -83,9 +83,16 @@ def index():
     return render_template("index.html", projects=projects, skills=skills, services=services)
 
 
+@app.route("/ai-training")
+def ai_training():
+    return render_template("genai_training.html")
+
+
+# Legacy redirect — keep old URL working
 @app.route("/women-ai-training")
 def women_ai_training():
-    return render_template("women_ai_training.html")
+    from flask import redirect
+    return redirect("/ai-training")
 
 
 if __name__ == "__main__":
