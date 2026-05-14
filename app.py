@@ -88,6 +88,11 @@ def ai_training():
     return render_template("genai_training.html")
 
 
+@app.route("/ai-training-cohort3")
+def ai_training_cohort3():
+    return render_template("genai_training_cohort3.html")
+
+
 # Legacy redirect — keep old URL working
 @app.route("/women-ai-training")
 def women_ai_training():
