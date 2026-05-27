@@ -11,7 +11,7 @@ def index():
             "description": "A robust web-based inventory management system that enables businesses to track stock levels, manage orders, and generate detailed reports in real time.",
             "technologies": ["Python", "Flask", "SQLite", "Jinja2", "Bootstrap"],
             "github": "https://github.com/spw3bt3ch/ai-weather-app",
-            "demo": "https://ai-weather-app-p7qr.onrender.com/",
+            "demo": "https://ai-weather-app-pi.vercel.app/",
             "image": "images/weather.png",
         },
         {
