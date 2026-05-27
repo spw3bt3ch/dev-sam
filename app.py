@@ -35,7 +35,7 @@ def index():
             "description": "A modern Flask web application for evaluating 14 key health metrics including BMI, cardiovascular health, stroke risk, metabolic health, respiratory health, and more.",
             "technologies": ["Python", "Flask", "SQLite", "Jinja2", "Bootstrap"],
             "github": "https://github.com/spw3bt3ch",
-            "demo": "https://health-plus-v1u7.onrender.com/",
+            "demo": "https://health-radar-three.vercel.app/",
             "image": "images/health-radarr.png",
         },
     ]
