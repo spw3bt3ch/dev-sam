@@ -229,7 +229,7 @@
         <!-- Floating badge -->
         <div
             class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full shimmer-badge border border-rose-500/30 text-sm font-semibold text-pink-300 mb-8 animate-fade-in">
-            <span class="text-lg">♀</span> International Women's Day • March 8–9, 2026
+            <i class="mdi mdi-gender-female text-lg mr-1"></i> International Women's Day • March 8–9, 2026
         </div>
 
         <!-- Headline -->
@@ -252,10 +252,7 @@
                 id="register-btn"
                 class="cta-pulse inline-flex items-center gap-3 px-10 py-4 rounded-full text-white text-lg font-black transition-all duration-200 hover:scale-105 hover:opacity-90"
                 style="background: linear-gradient(135deg, #f43f8a 0%, #a855f7 60%, #fbbf24 100%);">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
+                <i class="mdi mdi-pencil-box-outline text-xl"></i>
                 Register Now — ₦1,000 →
             </a>
             <a href="#schedule"
@@ -266,11 +263,11 @@
 
         <!-- Stats row -->
         <div class="flex flex-wrap justify-center gap-10 animate-fade-in">
-            {% for val, label, icon in [('2', 'Days of Training', '📅'), ('₦1,000', 'Fee', '🎁'), ('100%',
-            'Hands-On', '💻'), ('All Levels', 'Welcome', '🌸')] %}
+            {% for val, label, icon in [('2', 'Days of Training', 'mdi-calendar'), ('₦1,000', 'Fee', 'mdi-gift-outline'), ('100%',
+            'Hands-On', 'mdi-laptop'), ('All Levels', 'Welcome', 'mdi-flower-outline')] %}
             <div class="text-center">
                 <p class="text-3xl font-black rose-gradient-text">{{ val }}</p>
-                <p class="text-slate-400 text-xs mt-1">{{ icon }} {{ label }}</p>
+                <p class="text-slate-400 text-xs mt-1"><i class="mdi {{ icon }} text-pink-400 mr-1"></i>{{ label }}</p>
             </div>
             {% endfor %}
         </div>
@@ -284,7 +281,7 @@
 <!-- ── COUNTDOWN ─────────────────────────────────────── -->
 <section class="py-16 px-6 md:px-12 relative overflow-hidden" style="background: rgba(244,63,138,0.04);">
     <div class="max-w-3xl mx-auto text-center reveal">
-        <p class="text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">⏳ Event Countdown</p>
+        <p class="text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3"><i class="mdi mdi-timer-sand mr-1"></i> Event Countdown</p>
         <h2 class="text-3xl md:text-4xl font-black text-white mb-10">
             It starts in <span class="rose-gradient-text" id="countdown-label">…</span>
         </h2>
@@ -327,15 +324,15 @@
 
         <div class="grid md:grid-cols-3 gap-6">
             {% for icon, title, body in [
-            ('🤖', 'Generative AI Basics', 'Understand how large language models work, what they can do, and how to
+            ('mdi-robot', 'Generative AI Basics', 'Understand how large language models work, what they can do, and how to
             harness them for real-world tasks — no prior AI experience needed.'),
-            ('✍️', 'Prompt Engineering Mastery', 'Learn structured prompting techniques — zero-shot, few-shot,
+            ('mdi-lead-pencil', 'Prompt Engineering Mastery', 'Learn structured prompting techniques — zero-shot, few-shot,
             chain-of-thought — and walk away writing prompts that actually work.'),
-            ('💼', 'Career-Ready Skills', 'Leave with practical AI skills you can immediately apply in your career,
+            ('mdi-briefcase', 'Career-Ready Skills', 'Leave with practical AI skills you can immediately apply in your career,
             business, or personal projects in a world driven by AI.'),
             ] %}
             <div class="rose-glass rounded-2xl p-7 hover:scale-[1.02] transition-all duration-300 reveal">
-                <div class="text-4xl mb-4">{{ icon }}</div>
+                <div class="text-4xl mb-4 text-pink-400"><i class="mdi {{ icon }}"></i></div>
                 <h3 class="text-white font-bold text-xl mb-3">{{ title }}</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">{{ body }}</p>
             </div>
@@ -350,8 +347,9 @@
     <div class="max-w-5xl mx-auto">
 
         <div class="text-center mb-16 reveal">
-            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">📅
-                Programme</span>
+            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                <i class="mdi mdi-calendar-clock mr-1"></i> Programme
+            </span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 2-Day <span class="rose-gradient-text">Schedule</span>
             </h2>
@@ -363,8 +361,8 @@
             <div class="grad-border reveal">
                 <div class="grad-border-inner p-7 h-full">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-2xl"
-                            style="background: rgba(244,63,138,0.15);">🌸</div>
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl text-pink-400"
+                            style="background: rgba(244,63,138,0.15);"><i class="mdi mdi-flower"></i></div>
                         <div>
                             <p class="text-pink-400 text-xs font-semibold uppercase tracking-wider">Day 1 — March 8,
                                 2026</p>
@@ -400,8 +398,8 @@
             <div class="grad-border reveal">
                 <div class="grad-border-inner p-7 h-full">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-2xl"
-                            style="background: rgba(168,85,247,0.15);">⚡</div>
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl text-purple-400"
+                            style="background: rgba(168,85,247,0.15);"><i class="mdi mdi-flash"></i></div>
                         <div>
                             <p class="text-purple-400 text-xs font-semibold uppercase tracking-wider">Day 2 — March 9,
                                 2026</p>
@@ -443,8 +441,9 @@
     <div class="max-w-7xl mx-auto">
 
         <div class="text-center mb-16 reveal">
-            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">✨
-                Outcomes</span>
+            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                <i class="mdi mdi-star-circle-outline mr-1"></i> Outcomes
+            </span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 What You'll <span class="rose-gradient-text">Walk Away With</span>
             </h2>
@@ -452,15 +451,15 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {% for icon, point in [
-            ('🧠', 'Deep understanding of how Generative AI works'),
-            ('✍️', 'Mastery of practical prompt engineering techniques'),
-            ('🛠️', 'Hands-on experience with leading AI tools'),
-            ('📜', 'Certificate of Participation'),
-            ('🌍', 'Access to a growing community of women in tech'),
-            ('🚀', 'Actionable AI skills to accelerate your career'),
+            ('mdi-brain', 'Deep understanding of how Generative AI works'),
+            ('mdi-lead-pencil', 'Mastery of practical prompt engineering techniques'),
+            ('mdi-tools', 'Hands-on experience with leading AI tools'),
+            ('mdi-certificate', 'Certificate of Participation'),
+            ('mdi-earth', 'Access to a growing community of women in tech'),
+            ('mdi-rocket', 'Actionable AI skills to accelerate your career'),
             ] %}
             <div class="flex items-start gap-4 rose-glass rounded-2xl p-5 hover:scale-[1.02] transition-all reveal">
-                <span class="text-2xl">{{ icon }}</span>
+                <i class="mdi {{ icon }} text-2xl text-pink-400 flex-shrink-0"></i>
                 <p class="text-slate-300 text-sm font-medium leading-relaxed">{{ point }}</p>
             </div>
             {% endfor %}
@@ -483,7 +482,8 @@
                         </div>
                     </div>
                     <div>
-                        <p class="text-pink-400 text-xs font-semibold uppercase tracking-widest mb-2">👨‍🏫 Your Trainer
+                        <p class="text-pink-400 text-xs font-semibold uppercase tracking-widest mb-2">
+                            <i class="mdi mdi-account-tie mr-1 text-sm"></i> Your Trainer
                         </p>
                         <h3 class="text-white font-black text-2xl mb-2">Samuel Seye</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-4">
@@ -511,7 +511,9 @@
 <section class="py-24 px-6 md:px-12">
     <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16 reveal">
-            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">❓ FAQ</span>
+            <span class="inline-block text-pink-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                <i class="mdi mdi-help-circle-outline mr-1"></i> FAQ
+            </span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 Common <span class="rose-gradient-text">Questions</span>
             </h2>
@@ -532,10 +534,7 @@
                 <button class="faq-btn w-full text-left flex items-center justify-between px-6 py-5 focus:outline-none"
                     aria-expanded="false">
                     <span class="text-white font-semibold text-sm md:text-base">{{ q }}</span>
-                    <svg class="faq-icon w-5 h-5 text-pink-400 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <i class="faq-icon mdi mdi-chevron-down text-xl text-pink-400 flex-shrink-0 transition-transform duration-300"></i>
                 </button>
                 <div class="faq-body hidden px-6 pb-5">
                     <p class="text-slate-400 text-sm leading-relaxed">{{ a }}</p>
@@ -551,7 +550,9 @@
 <section class="py-24 px-6 md:px-12 relative overflow-hidden"
     style="background: radial-gradient(ellipse at 50% 50%, rgba(244,63,138,0.15) 0%, transparent 70%);">
     <div class="max-w-3xl mx-auto text-center reveal">
-        <div class="text-6xl mb-6">🌸</div>
+        <div class="text-6xl mb-6 text-pink-400">
+            <i class="mdi mdi-flower"></i>
+        </div>
         <h2 class="text-4xl md:text-5xl font-black text-white mb-6">
             Ready to step into the<br />
             <span class="rose-gradient-text">age of AI?</span>
@@ -563,10 +564,7 @@
         <a href="https://paystack.shop/pay/generative-ai-prompt-engrng" target="_blank" rel="noopener noreferrer"
             class="cta-pulse inline-flex items-center gap-3 px-12 py-5 rounded-full text-white text-xl font-black transition-all duration-200 hover:scale-105 hover:opacity-90"
             style="background: linear-gradient(135deg, #f43f8a 0%, #a855f7 60%, #fbbf24 100%);">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
+            <i class="mdi mdi-arrow-right text-2xl"></i>
             Claim Your Spot Now →
         </a>
         <p class="text-slate-500 text-sm mt-6">🌍 Open to all women — very cheap, no hidden fee or charges.</p>

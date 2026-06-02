@@ -59,25 +59,17 @@
         <div class="flex flex-wrap gap-4 justify-center animate-fade-in">
             <a href="#projects"
                 class="px-7 py-3.5 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold hover:opacity-90 shadow-xl shadow-primary-500/30 transition-all duration-200 hover:scale-105 flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                <i class="mdi mdi-chevron-down text-base"></i>
                 View Projects
             </a>
             <a href="#contact"
                 class="px-7 py-3.5 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-200 flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+                <i class="mdi mdi-email text-base"></i>
                 Contact Me
             </a>
             <a href="https://github.com/spw3bt3ch" target="_blank" rel="noopener noreferrer"
                 class="px-7 py-3.5 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-200 flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
+                <i class="mdi mdi-github text-base"></i>
                 GitHub Profile
             </a>
         </div>
@@ -97,9 +89,7 @@
         <div class="mt-16 flex justify-center animate-float">
             <a href="#about" aria-label="Scroll to about section"
                 class="w-10 h-10 flex items-center justify-center rounded-full glass-card border border-white/10 text-slate-400 hover:text-primary-400 transition-colors">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                <i class="mdi mdi-chevron-down text-lg"></i>
             </a>
         </div>
     </div>
@@ -166,15 +156,15 @@
                 <!-- Key highlights -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     {% for item in [
-                    ('🐍', 'Python Specialist'),
-                    ('⚡', 'Flask & FastAPI Expert'),
-                    ('🌐', 'Fullstack Developer'),
-                    ('🤖', 'Automation Engineer'),
-                    ('🏫', 'Coding Instructor'),
-                    ('🔧', 'Systems Builder'),
+                    ('mdi-language-python', 'Python Specialist'),
+                    ('mdi-flask', 'Flask & FastAPI Expert'),
+                    ('mdi-web', 'Fullstack Developer'),
+                    ('mdi-robot', 'Automation Engineer'),
+                    ('mdi-school', 'Coding Instructor'),
+                    ('mdi-wrench', 'Systems Builder'),
                     ] %}
                     <div class="flex items-center gap-3 glass-card border border-white/5 rounded-xl px-4 py-3">
-                        <span class="text-xl">{{ item[0] }}</span>
+                        <i class="mdi {{ item[0] }} text-xl text-primary-400"></i>
                         <span class="text-slate-300 text-sm font-medium">{{ item[1] }}</span>
                     </div>
                     {% endfor %}
@@ -215,10 +205,10 @@
 
         <!-- Skill category icons mapping -->
         {% set category_icons = {
-        'Backend': '🖥️',
-        'Frontend': '🎨',
-        'Database': '🗄️',
-        'Tools': '🔧'
+        'Backend': 'mdi-server',
+        'Frontend': 'mdi-palette-outline',
+        'Database': 'mdi-database',
+        'Tools': 'mdi-wrench-cog'
         } %}
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -226,8 +216,8 @@
             <div
                 class="glass-card border border-white/5 rounded-2xl p-6 hover:border-primary-500/30 hover:shadow-lg hover:shadow-primary-500/10 transition-all duration-300 group">
                 <div
-                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600/30 to-accent-600/30 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
-                    {{ category_icons.get(category, '⚙️') }}
+                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-600/30 to-accent-600/30 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform text-primary-400">
+                    <i class="mdi {{ category_icons.get(category, 'mdi-cog') }}"></i>
                 </div>
                 <h3 class="text-white font-bold text-lg mb-4">{{ category }}</h3>
                 <ul class="space-y-2.5">
@@ -303,8 +293,8 @@
                     </div>
                     {% else %}
                     <div
-                        class="h-full bg-gradient-to-br from-primary-600/20 via-slate-800 to-accent-600/20 flex items-center justify-center">
-                        <span class="text-5xl select-none">🔐</span>
+                        class="h-full bg-gradient-to-br from-primary-600/20 via-slate-800 to-accent-600/20 flex items-center justify-center text-primary-400">
+                        <i class="mdi mdi-lock text-5xl opacity-40"></i>
                     </div>
                     {% endif %}
                     <span
@@ -336,18 +326,12 @@
                     <div class="flex gap-3">
                         <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer"
                             class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-slate-300 hover:bg-primary-500/20 hover:border-primary-500/50 hover:text-white transition-all font-medium">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                            </svg>
+                            <i class="mdi mdi-github text-base"></i>
                             GitHub
                         </a>
                         <a href="{{ project.demo }}"
                             class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-primary-600/80 to-accent-600/80 text-sm text-white font-medium hover:from-primary-600 hover:to-accent-600 transition-all">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
+                            <i class="mdi mdi-open-in-new text-base"></i>
                             Live Demo
                         </a>
                     </div>
@@ -360,10 +344,7 @@
         <div class="mt-12 text-center">
             <a href="https://github.com/spw3bt3ch" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-3 px-8 py-4 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-200 hover:scale-105">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
+                <i class="mdi mdi-github text-xl"></i>
                 View All Projects on GitHub
             </a>
         </div>
@@ -392,8 +373,8 @@
             <div
                 class="glass-card border border-white/5 rounded-2xl p-7 hover:border-primary-500/30 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 group hover:-translate-y-1">
                 <div
-                    class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-600/20 to-accent-600/20 border border-primary-500/20 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary-500/20 transition-all">
-                    {{ service.icon }}
+                    class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-600/20 to-accent-600/20 border border-primary-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary-500/20 transition-all text-primary-400">
+                    <i class="{{ service.icon }}"></i>
                 </div>
                 <h3 class="text-white font-bold text-lg mb-3 group-hover:text-primary-400 transition-colors">
                     {{ service.title }}
@@ -417,9 +398,7 @@
             <a href="#contact"
                 class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold shadow-xl shadow-primary-500/30 hover:opacity-90 transition-all hover:scale-105">
                 Start a Project
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <i class="mdi mdi-arrow-right text-base ml-1"></i>
             </a>
         </div>
     </div>
@@ -453,8 +432,8 @@
                 <a href="tel:+2347077705842"
                     class="flex items-center gap-5 glass-card border border-white/5 rounded-2xl p-5 hover:border-primary-500/30 hover:bg-primary-500/5 transition-all group">
                     <div
-                        class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform flex-shrink-0">
-                        📱
+                        class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center text-xl group-hover:scale-110 transition-transform flex-shrink-0 text-primary-400">
+                        <i class="mdi mdi-phone"></i>
                     </div>
                     <div>
                         <p class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Phone & WhatsApp</p>
@@ -467,8 +446,8 @@
                 <a href="mailto:samueloluwapelumi8@gmail.com"
                     class="flex items-center gap-5 glass-card border border-white/5 rounded-2xl p-5 hover:border-primary-500/30 hover:bg-primary-500/5 transition-all group">
                     <div
-                        class="w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform flex-shrink-0">
-                        ✉️
+                        class="w-12 h-12 rounded-xl bg-accent-500/20 flex items-center justify-center text-xl group-hover:scale-110 transition-transform flex-shrink-0 text-accent-400">
+                        <i class="mdi mdi-email"></i>
                     </div>
                     <div>
                         <p class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">Email</p>
@@ -481,11 +460,8 @@
                 <a href="https://github.com/spw3bt3ch" target="_blank" rel="noopener noreferrer"
                     class="flex items-center gap-5 glass-card border border-white/5 rounded-2xl p-5 hover:border-primary-500/30 hover:bg-primary-500/5 transition-all group">
                     <div
-                        class="w-12 h-12 rounded-xl bg-slate-700/50 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                        </svg>
+                        class="w-12 h-12 rounded-xl bg-slate-700/50 flex items-center justify-center text-xl group-hover:scale-110 transition-transform flex-shrink-0 text-white">
+                        <i class="mdi mdi-github"></i>
                     </div>
                     <div>
                         <p class="text-slate-400 text-xs font-medium uppercase tracking-wider mb-1">GitHub</p>
@@ -498,12 +474,7 @@
                 <a href="https://wa.me/2347077705842?text=Hi%20Samuel%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
                     target="_blank" rel="noopener noreferrer"
                     class="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-green-600/80 hover:bg-green-600 text-white font-bold border border-green-500/50 transition-all hover:scale-[1.02] shadow-lg shadow-green-500/20">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                        <path
-                            d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25l5.551-1.457A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.017-1.374l-.36-.213-3.294.865.879-3.21-.235-.373A9.818 9.818 0 112.182 12 9.818 9.818 0 0112 21.818z" />
-                    </svg>
+                    <i class="mdi mdi-whatsapp text-xl"></i>
                     Chat on WhatsApp
                 </a>
             </div>
@@ -546,9 +517,7 @@
 
                     <button type="submit" id="form-submit-btn"
                         class="w-full py-4 rounded-xl bg-gradient-to-r from-primary-600 to-accent-600 text-white font-bold hover:opacity-90 shadow-lg shadow-primary-500/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
+                        <i class="mdi mdi-send text-base"></i>
                         Send Message
                     </button>
 

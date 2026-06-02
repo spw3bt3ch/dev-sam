@@ -247,11 +247,11 @@
 
         <!-- Badge -->
         <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full ai-shimmer-badge border border-cyan-500/30 text-sm font-bold text-cyan-300 mb-8 animate-fade-in">
-            <span class="relative flex h-2.5 w-2.5">
+            <span class="relative flex h-2.5 w-2.5 mr-1">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
             </span>
-            🚀 SMI Ventures · Professional AI Training Programme
+            <i class="mdi mdi-rocket-launch-outline text-base mr-1"></i> SMI Ventures · Professional AI Training Programme
         </div>
 
         <!-- Headline -->
@@ -273,32 +273,27 @@
                 id="register-btn"
                 class="ai-cta-pulse inline-flex items-center gap-3 px-10 py-4 rounded-full text-white text-lg font-black transition-all duration-200 hover:scale-105 hover:opacity-90"
                 style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
+                <i class="mdi mdi-pencil-box-outline text-xl"></i>
                 Register Now — ₦10,000
             </a>
             <a href="#modules"
                 class="inline-flex items-center gap-2 px-8 py-4 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-200">
                 Explore Modules
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
+                <i class="mdi mdi-chevron-down text-base"></i>
             </a>
         </div>
 
         <!-- Stats row -->
         <div class="flex flex-wrap justify-center gap-10 md:gap-16 animate-fade-in">
             {% for val, label, icon in [
-                ('5', 'Core Modules', '📚'),
-                ('₦10,000', 'Training Fee', '💳'),
-                ('100%', 'Hands-On', '💻'),
-                ('All Levels', 'Welcome', '🌟')
+                ('5', 'Core Modules', 'mdi-book-open-page-variant'),
+                ('₦10,000', 'Training Fee', 'mdi-credit-card-outline'),
+                ('100%', 'Hands-On', 'mdi-laptop'),
+                ('All Levels', 'Welcome', 'mdi-star-outline')
             ] %}
             <div class="text-center">
                 <p class="text-3xl font-black ai-gradient-text">{{ val }}</p>
-                <p class="text-slate-400 text-xs mt-1 font-medium">{{ icon }} {{ label }}</p>
+                <p class="text-slate-400 text-xs mt-1 font-medium"><i class="mdi {{ icon }} text-cyan-400 mr-1"></i>{{ label }}</p>
             </div>
             {% endfor %}
         </div>
@@ -321,12 +316,12 @@
 
         <div class="grid md:grid-cols-3 gap-6">
             {% for icon, title, body in [
-                ('🤖', 'Master Generative AI', 'Go beyond the basics. Understand how large language models work at a deep level and harness them to solve complex real-world problems with precision.'),
-                ('⚙️', 'Automate Your Business', 'Learn to deploy AI-powered automation systems that save time, reduce cost, and dramatically multiply your output — whether in sales, marketing, or operations.'),
-                ('🏆', 'Stand Out in the Market', 'Build an unfair advantage. Certified AI practitioners are now among the most sought-after professionals globally. This training positions you at the frontier.'),
+                ('mdi-robot', 'Master Generative AI', 'Go beyond the basics. Understand how large language models work at a deep level and harness them to solve complex real-world problems with precision.'),
+                ('mdi-cog', 'Automate Your Business', 'Learn to deploy AI-powered automation systems that save time, reduce cost, and dramatically multiply your output — whether in sales, marketing, or operations.'),
+                ('mdi-trophy', 'Stand Out in the Market', 'Build an unfair advantage. Certified AI practitioners are now among the most sought-after professionals globally. This training positions you at the frontier.'),
             ] %}
             <div class="ai-glass module-card rounded-2xl p-7 reveal">
-                <div class="text-4xl mb-4">{{ icon }}</div>
+                <div class="text-4xl mb-4 text-cyan-400"><i class="mdi {{ icon }}"></i></div>
                 <h3 class="text-white font-bold text-xl mb-3">{{ title }}</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">{{ body }}</p>
             </div>
@@ -341,7 +336,7 @@
     <div class="max-w-7xl mx-auto">
 
         <div class="text-center mb-16 reveal">
-            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">📚 Curriculum</span>
+            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3"><i class="mdi mdi-school mr-1"></i> Curriculum</span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 Training <span class="ai-gradient-text">Modules</span>
             </h2>
@@ -351,7 +346,7 @@
         <div class="space-y-6">
 
             {% set modules = [
-                (1, '🧠', 'Advanced Prompt Engineering Techniques & Frameworks',
+                (1, 'mdi-brain', 'Advanced Prompt Engineering Techniques & Frameworks',
                     'ai-blue',
                     [
                         'Chain-of-Thought (CoT) & Tree-of-Thought (ToT) prompting',
@@ -363,7 +358,7 @@
                     ],
                     'Master the science and art of communicating with AI models. You\'ll leave with a repeatable prompt engineering process that delivers consistent, high-quality results every time.'
                 ),
-                (2, '💼', 'AI for Business, Productivity & Automation',
+                (2, 'mdi-briefcase', 'AI for Business, Productivity & Automation',
                     'ai-cyan',
                     [
                         'AI-powered project management & scheduling',
@@ -375,7 +370,7 @@
                     ],
                     'Dramatically cut busywork and amplify your output. Learn exactly how to integrate AI into your daily business operations so your tasks get done 5× faster.'
                 ),
-                (3, '🛠️', 'AI Tools Ecosystem',
+                (3, 'mdi-tools', 'AI Tools Ecosystem',
                     'ai-violet',
                     [
                         'ChatGPT — advanced conversation & task automation',
@@ -387,7 +382,7 @@
                     ],
                     'Navigate the rapidly expanding AI tools landscape with confidence. Understand which tool to use for which job — and how to combine them for maximum impact.'
                 ),
-                (4, '🎨', 'AI Content Creation & Full Business Branding',
+                (4, 'mdi-palette', 'AI Content Creation & Full Business Branding',
                     'ai-gold',
                     [
                         'Generating scroll-stopping social media content at scale',
@@ -399,7 +394,7 @@
                     ],
                     'Create an entire brand identity and a month\'s worth of content in days, not weeks. Learn to produce professional-grade marketing materials entirely with AI tools.'
                 ),
-                (5, '📊', 'AI Business Analysis',
+                (5, 'mdi-chart-bar', 'AI Business Analysis',
                     'ai-green',
                     [
                         'AI-driven market research & competitor analysis',
@@ -421,9 +416,9 @@
                         <div class="flex flex-col md:flex-row md:items-start gap-6 mb-6">
                             <div class="flex items-center gap-4 flex-shrink-0">
                                 <div class="num-badge">{{ num }}</div>
-                                <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
+                                <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl text-cyan-400"
                                     style="background: rgba(6,182,212,0.12); border: 1px solid rgba(6,182,212,0.2);">
-                                    {{ icon }}
+                                    <i class="mdi {{ icon }}"></i>
                                 </div>
                             </div>
                             <div class="flex-1">
@@ -436,7 +431,7 @@
                         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {% for point in points %}
                             <div class="flex items-start gap-3 ai-glass-cyan rounded-xl px-4 py-3">
-                                <span class="text-cyan-400 mt-0.5 flex-shrink-0">✦</span>
+                                <i class="mdi mdi-star text-cyan-400 mt-0.5 flex-shrink-0 text-sm"></i>
                                 <span class="text-slate-300 text-sm font-medium leading-snug">{{ point }}</span>
                             </div>
                             {% endfor %}
@@ -456,7 +451,7 @@
     <div class="max-w-7xl mx-auto">
 
         <div class="text-center mb-16 reveal">
-            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">✨ Outcomes</span>
+            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3"><i class="mdi mdi-star-circle-outline mr-1"></i> Outcomes</span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 What You'll <span class="ai-gradient-text">Walk Away With</span>
             </h2>
@@ -464,18 +459,18 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {% for icon, point in [
-                ('🧠', 'Deep mastery of advanced prompt engineering techniques'),
-                ('⚙️', 'Working AI automation systems for your business'),
-                ('🛠️', 'Hands-on experience with 15+ leading AI tools'),
-                ('📜', 'Certificate of Completion'),
-                ('🚀', 'A complete AI-powered content & branding system'),
-                ('📊', 'AI-driven business analysis skills'),
-                ('🌍', 'Access to SMI Ventures AI community & resources'),
-                ('💡', 'Actionable playbooks for every module covered'),
-                ('🎯', 'A personalised AI strategy for your career or business'),
+                ('mdi-brain', 'Deep mastery of advanced prompt engineering techniques'),
+                ('mdi-cog', 'Working AI automation systems for your business'),
+                ('mdi-tools', 'Hands-on experience with 15+ leading AI tools'),
+                ('mdi-certificate', 'Certificate of Completion'),
+                ('mdi-rocket', 'A complete AI-powered content & branding system'),
+                ('mdi-chart-bar', 'AI-driven business analysis skills'),
+                ('mdi-earth', 'Access to SMI Ventures AI community & resources'),
+                ('mdi-lightbulb-on', 'Actionable playbooks for every module covered'),
+                ('mdi-target', 'A personalised AI strategy for your career or business'),
             ] %}
             <div class="flex items-start gap-4 ai-glass module-card rounded-2xl p-5 reveal">
-                <span class="text-2xl flex-shrink-0">{{ icon }}</span>
+                <i class="mdi {{ icon }} text-2xl text-cyan-400 flex-shrink-0"></i>
                 <p class="text-slate-300 text-sm font-medium leading-relaxed">{{ point }}</p>
             </div>
             {% endfor %}
@@ -511,11 +506,9 @@
                             'Post-training Q&A support',
                         ] %}
                         <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
+                            <span class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 text-xs text-cyan-400"
                                 style="background: rgba(6,182,212,0.2); border:1px solid rgba(6,182,212,0.4);">
-                                <svg class="w-3 h-3 text-cyan-400" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
+                                <i class="mdi mdi-check"></i>
                             </span>
                             <span class="text-slate-300 text-sm font-medium">{{ item }}</span>
                         </li>
@@ -525,10 +518,7 @@
                     <a href="https://paystack.shop/pay/gen-ai-cohort3" target="_blank" rel="noopener noreferrer"
                         class="ai-cta-pulse inline-flex items-center gap-3 px-12 py-5 rounded-full text-white text-xl font-black transition-all duration-200 hover:scale-105 hover:opacity-90"
                         style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                        </svg>
+                        <i class="mdi mdi-arrow-right text-2xl"></i>
                         Secure Your Spot Now →
                     </a>
 
@@ -554,7 +544,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-2">👨‍🏫 Your Trainer</p>
+                        <p class="text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-2"><i class="mdi mdi-account-tie mr-1 text-sm"></i> Your Trainer</p>
                         <h3 class="text-white font-black text-2xl mb-2">Samuel Seye</h3>
                         <p class="text-slate-400 text-sm leading-relaxed mb-5">
                             Software Developer, AI practitioner, and experienced coding instructor passionate about
@@ -622,16 +612,12 @@
                         <!-- Stars -->
                         <div class="flex gap-1 mb-5">
                             {% for _ in range(5) %}
-                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
+                            <i class="mdi mdi-star text-yellow-400 text-lg"></i>
                             {% endfor %}
                         </div>
 
                         <!-- Quote icon -->
-                        <svg class="w-8 h-8 text-cyan-500/30 mb-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                        </svg>
+                        <i class="mdi mdi-format-quote-open text-cyan-500/30 text-4xl mb-2 block"></i>
 
                         <!-- Quote text -->
                         <p class="text-slate-300 text-sm leading-relaxed flex-1 italic mb-6">
@@ -664,7 +650,7 @@
 <section class="py-24 px-6 md:px-12">
     <div class="max-w-3xl mx-auto">
         <div class="text-center mb-14 reveal">
-            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3">❓ FAQ</span>
+            <span class="inline-block text-cyan-400 font-semibold text-sm uppercase tracking-widest mb-3"><i class="mdi mdi-help-circle-outline mr-1"></i> FAQ</span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
                 Common <span class="ai-gradient-text">Questions</span>
             </h2>
@@ -682,10 +668,7 @@
                 <button class="faq-btn w-full text-left flex items-center justify-between px-6 py-5 focus:outline-none"
                     aria-expanded="false">
                     <span class="text-white font-semibold text-sm md:text-base">{{ q }}</span>
-                    <svg class="faq-icon w-5 h-5 text-cyan-400 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <i class="faq-icon mdi mdi-chevron-down text-xl text-cyan-400 flex-shrink-0 transition-transform duration-300"></i>
                 </button>
                 <div class="faq-body hidden px-6 pb-5">
                     <p class="text-slate-400 text-sm leading-relaxed">{{ a }}</p>
@@ -705,7 +688,9 @@
     <div class="ai-orb2" style="opacity:0.5;"></div>
 
     <div class="max-w-3xl mx-auto text-center reveal relative z-10">
-        <div class="text-6xl mb-6">🚀</div>
+        <div class="text-6xl mb-6 text-cyan-400">
+            <i class="mdi mdi-rocket-launch-outline"></i>
+        </div>
         <h2 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             Ready to unlock the<br />
             <span class="ai-gradient-text">full power of AI?</span>
@@ -716,10 +701,7 @@
         <a href="https://paystack.shop/pay/gen-ai-cohort3" target="_blank" rel="noopener noreferrer"
             class="ai-cta-pulse inline-flex items-center gap-3 px-12 py-5 rounded-full text-white text-xl font-black transition-all duration-200 hover:scale-105 hover:opacity-90"
             style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
+            <i class="mdi mdi-arrow-right text-2xl"></i>
             Register Now — ₦10,000 →
         </a>
         <p class="text-slate-500 text-sm mt-6">🔒 Payment powered by Paystack · Secure & Instant</p>
