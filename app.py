@@ -49,32 +49,32 @@ def index():
 
     services = [
         {
-            "icon": "🖥️",
+            "icon": "mdi mdi-server",
             "title": "Backend Development",
             "description": "Scalable, secure, and high-performance backend systems using Python, Flask, and FastAPI tailored to your business needs.",
         },
         {
-            "icon": "🌐",
+            "icon": "mdi mdi-web",
             "title": "Fullstack Web Development",
             "description": "End-to-end web applications with clean frontends and robust backends, from design to deployment.",
         },
         {
-            "icon": "🔗",
+            "icon": "mdi mdi-api",
             "title": "API Development",
             "description": "Custom RESTful APIs that power mobile apps, web clients, and third-party integrations with full documentation.",
         },
         {
-            "icon": "⚙️",
+            "icon": "mdi mdi-cog",
             "title": "Custom Software Development",
             "description": "Bespoke software solutions engineered from scratch to solve unique business challenges efficiently.",
         },
         {
-            "icon": "🤖",
+            "icon": "mdi mdi-robot",
             "title": "Automation Systems",
             "description": "Intelligent automation tools and scripts that eliminate repetitive tasks and streamline operations at scale.",
         },
         {
-            "icon": "🎨",
+            "icon": "mdi mdi-palette",
             "title": "Graphics & Product Design",
             "description": "Creative visual solutions spanning brand identity, UI/UX design, and product graphics — delivering stunning, user-centred designs that communicate and convert.",
         },
