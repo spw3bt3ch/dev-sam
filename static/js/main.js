@@ -1,5 +1,5 @@
 /**
- * main.js — Samuel Seye Portfolio
+ * main.js — G5 Multimedia Agency
  * Handles: navbar scroll effects, mobile menu toggle,
  *          smooth scrolling, scroll reveal, contact form.
  */
@@ -180,11 +180,11 @@
       }
 
       // Compose mailto link
-      const mailtoSubject = encodeURIComponent(subject || `Portfolio Contact from ${name}`);
+      const mailtoSubject = encodeURIComponent(subject || `G5 Multimedia Agency Contact from ${name}`);
       const mailtoBody = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       );
-      const mailtoHref = `mailto:samueloluwapelumi8@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      const mailtoHref = `mailto:g5multimediaagency@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
       // Open mail client
       window.location.href = mailtoHref;
