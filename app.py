@@ -15,12 +15,12 @@ def index():
             "image": "images/weather.png",
         },
         {
-            "title": "Finance Tracker",
-            "description": "A fully functional finance tracker for organizations, supporting inbox management, compose, reply, and attachment functionalities.",
-            "technologies": ["Python", "Flask", "SQLite", "REST API", "JavaScript"],
-            "github": "https://github.com/spw3bt3ch/finance-trkr",
-            "demo": "https://github.com/spw3bt3ch/finance-trkr",
-            "image": "images/finance-trckr.png",
+            "title": "COSEF Platform",
+            "description": "A comprehensive web portal for the Civic Orientation and Social Empowerment Foundation (COSEF), facilitating community empowerment, social orientation program management, and student enrollments.",
+            "technologies": ["Python", "Flask", "SQLite", "Tailwind CSS", "Jinja2"],
+            "github": "https://github.com/spw3bt3ch/cosef",
+            "demo": "https://www.cosef.org.ng/",
+            "image": "images/cosef.png",
         },
         {
             "title": "Portfolio Platform for Designers",
@@ -41,22 +41,23 @@ def index():
     ]
 
     skills = {
-        "Backend": ["Python", "Flask", "FastAPI", "REST APIs"],
-        "Frontend": ["HTML5", "Tailwind CSS", "JavaScript", "Jinja2"],
-        "Database": ["SQLite", "PostgreSQL", "MySQL"],
-        "Tools": ["Git", "GitHub", "Vercel", "Docker"],
+        "Design & UI/UX": ["Figma", "Adobe Suite", "UI/UX Prototypes", "Wireframes", "Mobile-First Design"],
+        "Web Development": ["Python", "Flask & FastAPI", "JavaScript (ES6+)", "HTML5 & CSS3", "Tailwind CSS"],
+        "Databases & Backend": ["PostgreSQL", "MySQL", "SQLite", "REST APIs", "SQLAlchemy"],
+        "Cloud & Infrastructure": ["Vercel / Netlify", "AWS / DigitalOcean", "Git & GitHub", "Cloudflare / DNS", "SSL / Security"],
     }
 
     services = [
         {
+            "icon": "mdi mdi-web",
+            "title": "Web Design & Development",
+            "description": "Stunning, responsive designs paired with powerful development to create high-conversion websites. Sub-services include SEO, cloud hosting, domains, and maintenance.",
+            "link": "/web-design-development",
+        },
+        {
             "icon": "mdi mdi-server",
             "title": "Backend Development",
             "description": "Scalable, secure, and high-performance backend systems using Python, Flask, and FastAPI tailored to your business needs.",
-        },
-        {
-            "icon": "mdi mdi-web",
-            "title": "Fullstack Web Development",
-            "description": "End-to-end web applications with clean frontends and robust backends, from design to deployment.",
         },
         {
             "icon": "mdi mdi-api",
@@ -76,11 +77,16 @@ def index():
         {
             "icon": "mdi mdi-palette",
             "title": "Graphics & Product Design",
-            "description": "Creative visual solutions spanning brand identity, UI/UX design, and product graphics — delivering stunning, user-centred designs that communicate and convert.",
+            "description": "Creative visual solutions spanning brand identity, UI/UX design, and product graphics — delivering stunning, user-centred designs.",
         },
     ]
 
     return render_template("index.html", projects=projects, skills=skills, services=services)
+
+
+@app.route("/web-design-development")
+def web_design_development():
+    return render_template("web_design_development.html")
 
 
 @app.route("/ai-training")

@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Samuel Seye — Software Developer, Python Developer & Fullstack Developer based in Nigeria. Building scalable backend systems, automation tools, and modern web applications." />
-  <title>{% block title %}Samuel Seye | Software Developer{% endblock %}</title>
+    content="G5 Multimedia Agency — Premium Web Design, Development, SEO, Hosting, Domain services, and custom software. We design and build modern digital solutions that convert." />
+  <title>{% block title %}G5 Multimedia Agency | Premium Web Design & Development{% endblock %}</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -156,20 +156,20 @@
     aria-label="Main navigation">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group" aria-label="Samuel Seye homepage">
+      <a href="/" class="flex items-center gap-2 group" aria-label="G5 Multimedia Agency homepage">
         <div
           class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-primary-500/30">
-          S
+          G5
         </div>
         <span class="text-white font-bold text-xl tracking-wide group-hover:text-primary-400 transition-colors">
-          SMI<span class="gradient-text"></span>
+          G5 <span class="gradient-text">Multimedia</span>
         </span>
       </a>
 
       <!-- Desktop nav links -->
       <ul class="hidden md:flex items-center gap-8">
-        {% for label, anchor in [('About', '/#about'), ('Skills', '/#skills'), ('Projects', '/#projects'), ('Services',
-        '/#services'), ('Contact', '/#contact')] %}
+        {% for label, anchor in [('About', '/#about'), ('Web Design', '/web-design-development'), ('Services',
+        '/#services'), ('Projects', '/#projects'), ('Contact', '/#contact')] %}
         <li>
           <a href="{{ anchor }}"
             class="nav-link text-slate-400 hover:text-primary-400 text-sm font-medium transition-colors duration-200">
@@ -204,8 +204,8 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden mt-4 glass-card rounded-2xl p-6 mx-2">
       <ul class="flex flex-col gap-4">
-        {% for label, anchor in [('About', '/#about'), ('Skills', '/#skills'), ('Projects', '/#projects'), ('Services',
-        '/#services'), ('Contact', '/#contact')] %}
+        {% for label, anchor in [('About', '/#about'), ('Web Design', '/web-design-development'), ('Services',
+        '/#services'), ('Projects', '/#projects'), ('Contact', '/#contact')] %}
         <li>
           <a href="{{ anchor }}"
             class="mobile-nav-link text-slate-300 hover:text-primary-400 font-medium transition-colors duration-200 block py-1">
@@ -242,11 +242,11 @@
         <div class="flex items-center gap-3">
           <div
             class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg">
-            S
+            G5
           </div>
           <div>
-            <p class="text-white font-bold">Samuel Seye (SMI)</p>
-            <p class="text-slate-400 text-xs">Software Developer · Nigeria</p>
+            <p class="text-white font-bold">G5 Multimedia Agency</p>
+            <p class="text-slate-400 text-xs">Digital Agency · Web Services</p>
           </div>
         </div>
 
@@ -272,7 +272,7 @@
 
       <div class="mt-8 pt-6 border-t border-white/5 text-center">
         <p class="text-slate-500 text-sm">
-          © 2026 Samuel Seye (SMI). All rights reserved.
+          © 2026 G5 Multimedia Agency. All rights reserved.
         </p>
       </div>
     </div>

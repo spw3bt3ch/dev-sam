@@ -33,13 +33,13 @@
 
         <!-- Name -->
         <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-slide-up">
-            <span class="text-white">Samuel</span>
-            <span class="gradient-text"> Seye</span>
+            <span class="text-white">G5 Multimedia</span>
+            <span class="gradient-text"> Agency</span>
         </h1>
 
         <!-- Title ribbon -->
         <div class="inline-flex flex-wrap justify-center gap-3 mb-6 animate-slide-up">
-            {% for role in ['Software Developer', 'Python Developer', 'Fullstack Developer'] %}
+            {% for role in ['Web Design', 'Web Development', 'SEO Optimization', 'Cloud Hosting', 'Domain Services'] %}
             <span
                 class="px-4 py-1.5 rounded-full glass-card border border-white/10 text-slate-300 text-sm md:text-base font-medium">
                 {{ role }}
@@ -49,10 +49,10 @@
 
         <!-- Tagline -->
         <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in">
-            I build <span class="text-white font-semibold">scalable backend systems</span>,
-            <span class="text-white font-semibold">automation tools</span>, and
-            <span class="text-white font-semibold">modern web applications</span>
-            using Python and modern technologies.
+            We build <span class="text-white font-semibold">stunning websites</span>,
+            <span class="text-white font-semibold">high-performance web apps</span>, and
+            <span class="text-white font-semibold">premium digital experiences</span>
+            to elevate your business online.
         </p>
 
         <!-- CTA buttons -->
@@ -65,7 +65,7 @@
             <a href="#contact"
                 class="px-7 py-3.5 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-200 flex items-center gap-2">
                 <i class="mdi mdi-email text-base"></i>
-                Contact Me
+                Contact Us
             </a>
             <a href="https://github.com/spw3bt3ch" target="_blank" rel="noopener noreferrer"
                 class="px-7 py-3.5 rounded-full glass-card border border-white/10 text-white font-semibold hover:border-primary-500/50 hover:bg-primary-500/10 transition-all duration-200 flex items-center gap-2">
@@ -76,8 +76,8 @@
 
         <!-- Stats -->
         <div class="flex flex-wrap justify-center gap-8 mt-16 animate-fade-in">
-            {% for stat in [('4+', 'Projects Built'), ('3+', 'Years Experience'), ('10+', 'Technologies'), ('100%',
-            'Commitment')] %}
+            {% for stat in [('50+', 'Websites Built'), ('5+', 'Years Experience'), ('99.9%',
+            'Server Uptime'), ('100%', 'Client Satisfaction')] %}
             <div class="text-center">
                 <p class="text-3xl font-black gradient-text">{{ stat[0] }}</p>
                 <p class="text-slate-400 text-xs font-medium mt-1">{{ stat[1] }}</p>
@@ -105,9 +105,9 @@
         <!-- Section header -->
         <div class="text-center mb-16">
             <span class="inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3">About
-                Me</span>
+                Us</span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
-                Who I <span class="gradient-text">Am</span>
+                Who We <span class="gradient-text">Are</span>
             </h2>
         </div>
 
@@ -118,15 +118,15 @@
                 <div class="relative">
                     <div
                         class="w-64 h-64 md:w-[420px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl shadow-primary-500/30 animate-float ring-4 ring-primary-500/30">
-                        <img src="{{ url_for('static', filename='images/Sam.png') }}"
-                            alt="Samuel Seye – Software Developer" class="w-full h-full object-cover object-top" />
+                        <img src="{{ url_for('static', filename='images/g5_agency.png') }}"
+                            alt="G5 Multimedia Agency Workspace" class="w-full h-full object-cover" />
                     </div>
                     <!-- Floating badge -->
                     <div class="absolute -bottom-4 -right-4 glass-card border border-white/10 px-4 py-2 rounded-xl">
                         <p class="text-white font-bold text-sm">📍 Nigeria</p>
                     </div>
                     <div class="absolute -top-4 -left-4 glass-card border border-white/10 px-4 py-2 rounded-xl">
-                        <p class="text-green-400 font-bold text-sm">● Open to Work</p>
+                        <p class="text-green-400 font-bold text-sm">● Booking Projects</p>
                     </div>
                 </div>
             </div>
@@ -134,34 +134,27 @@
             <!-- Bio text -->
             <div class="space-y-6">
                 <h3 class="text-2xl md:text-3xl font-bold text-white leading-snug">
-                    A passionate developer building<br />
-                    <span class="gradient-text">impactful software solutions.</span>
+                    A premier digital agency crafting<br />
+                    <span class="gradient-text">impactful web solutions.</span>
                 </h3>
 
                 <p class="text-slate-400 leading-relaxed">
-                    I'm <strong class="text-white">Samuel Seye</strong>, a dedicated Software Developer based in Nigeria
-                    with deep expertise in Python-based backend engineering, fullstack web development, and automation
-                    systems.
-                    I specialize in turning complex problems into clean, scalable, and maintainable software.
+                    We are <strong class="text-white">G5 Multimedia Agency</strong>, a full-service web design and development agency based in Nigeria. We specialize in creating high-performance websites, custom web applications, automation solutions, and professional graphics.
                 </p>
 
                 <p class="text-slate-400 leading-relaxed">
-                    From architecting RESTful APIs with <strong class="text-white">Flask</strong> and <strong
-                        class="text-white">FastAPI</strong>,
-                    to building complete fullstack platforms, I thrive in every layer of the stack.
-                    I am also an experienced <strong class="text-white">coding instructor</strong>, passionate about
-                    mentoring the next generation of African developers.
+                    From brand identity and custom UI/UX design to robust APIs, reliable cloud hosting, and search engine optimization (SEO), we provide end-to-end digital solutions designed to grow your business and increase conversions.
                 </p>
 
                 <!-- Key highlights -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     {% for item in [
-                    ('mdi-language-python', 'Python Specialist'),
-                    ('mdi-flask', 'Flask & FastAPI Expert'),
-                    ('mdi-web', 'Fullstack Developer'),
-                    ('mdi-robot', 'Automation Engineer'),
-                    ('mdi-school', 'Coding Instructor'),
-                    ('mdi-wrench', 'Systems Builder'),
+                    ('mdi-web', 'Website Design'),
+                    ('mdi-code-tags', 'Custom Development'),
+                    ('mdi-google-analytics', 'SEO Optimization'),
+                    ('mdi-cloud', 'Cloud Hosting'),
+                    ('mdi-domain', 'Domain Setup'),
+                    ('mdi-shield-check', 'Security & Maintenance'),
                     ] %}
                     <div class="flex items-center gap-3 glass-card border border-white/5 rounded-xl px-4 py-3">
                         <i class="mdi {{ item[0] }} text-xl text-primary-400"></i>
@@ -194,21 +187,19 @@
     <div class="max-w-7xl mx-auto">
 
         <div class="text-center mb-16">
-            <span class="inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3">Technical
-                Skills</span>
+            <span class="inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3">Our Stack</span>
             <h2 class="text-4xl md:text-5xl font-black text-white">
-                My <span class="gradient-text">Stack</span>
+                Technologies We <span class="gradient-text">Master</span>
             </h2>
-            <p class="text-slate-400 mt-4 max-w-xl mx-auto">Technologies and tools I use to build robust,
-                production-ready software.</p>
+            <p class="text-slate-400 mt-4 max-w-xl mx-auto">We use modern, industry-leading tools and frameworks to build scalable, beautiful, and secure digital products.</p>
         </div>
 
         <!-- Skill category icons mapping -->
         {% set category_icons = {
-        'Backend': 'mdi-server',
-        'Frontend': 'mdi-palette-outline',
-        'Database': 'mdi-database',
-        'Tools': 'mdi-wrench-cog'
+        'Design & UI/UX': 'mdi-palette',
+        'Web Development': 'mdi-code-tags',
+        'Databases & Backend': 'mdi-database',
+        'Cloud & Infrastructure': 'mdi-cloud-upload'
         } %}
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -220,30 +211,26 @@
                     <i class="mdi {{ category_icons.get(category, 'mdi-cog') }}"></i>
                 </div>
                 <h3 class="text-white font-bold text-lg mb-4">{{ category }}</h3>
-                <ul class="space-y-2.5">
+                <div class="flex flex-wrap gap-2">
                     {% for skill in skill_list %}
-                    <li class="flex items-center gap-2.5">
-                        <span
-                            class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex-shrink-0"></span>
-                        <span class="text-slate-300 text-sm font-medium">{{ skill }}</span>
-                    </li>
+                    <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-slate-300 hover:border-primary-500/30 hover:text-white transition-colors duration-200">
+                        {{ skill }}
+                    </span>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
             {% endfor %}
         </div>
 
         <!-- Proficiency bars -->
         <div class="mt-14 glass-card border border-white/5 rounded-2xl p-8">
-            <h3 class="text-white font-bold text-xl mb-8">Core Proficiency</h3>
+            <h3 class="text-white font-bold text-xl mb-8">Agency Strengths</h3>
             <div class="grid md:grid-cols-2 gap-6">
                 {% for tech, level in [
-                ('Python', 95),
-                ('Flask / FastAPI', 90),
-                ('JavaScript', 75),
-                ('PostgreSQL / SQLite', 85),
-                ('HTML & Tailwind CSS', 88),
-                ('Git & GitHub', 90),
+                ('UI/UX Design & Prototyping (Figma)', 95),
+                ('Frontend & Backend Development (Flask/JS)', 92),
+                ('Search Engine Optimization (SEO)', 90),
+                ('Cloud Deployment & Infrastructure', 85),
                 ] %}
                 <div>
                     <div class="flex justify-between mb-2">
@@ -252,7 +239,7 @@
                     </div>
                     <div class="h-2 bg-white/5 rounded-full overflow-hidden">
                         <div class="h-full rounded-full bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-1000"
-                            style="width: {{ level }}%;" data-width="{{ level }}">
+                            style="width: 0%;" data-width="{{ level }}">
                         </div>
                     </div>
                 </div>
@@ -371,17 +358,27 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {% for service in services %}
             <div
-                class="glass-card border border-white/5 rounded-2xl p-7 hover:border-primary-500/30 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 group hover:-translate-y-1">
-                <div
-                    class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-600/20 to-accent-600/20 border border-primary-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary-500/20 transition-all text-primary-400">
-                    <i class="{{ service.icon }}"></i>
+                class="glass-card border border-white/5 rounded-2xl p-7 hover:border-primary-500/30 hover:shadow-xl hover:shadow-primary-500/10 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-600/20 to-accent-600/20 border border-primary-500/20 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary-500/20 transition-all text-primary-400">
+                        <i class="{{ service.icon }}"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-3 group-hover:text-primary-400 transition-colors">
+                        {{ service.title }}
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        {{ service.description }}
+                    </p>
                 </div>
-                <h3 class="text-white font-bold text-lg mb-3 group-hover:text-primary-400 transition-colors">
-                    {{ service.title }}
-                </h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    {{ service.description }}
-                </p>
+                {% if service.link %}
+                <div class="mt-2">
+                    <a href="{{ service.link }}" class="text-sm font-semibold text-primary-400 hover:text-primary-300 flex items-center gap-1 group/link transition-colors">
+                        View Service Page 
+                        <i class="mdi mdi-arrow-right transition-transform group-hover/link:translate-x-1"></i>
+                    </a>
+                </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
@@ -471,7 +468,7 @@
                 </a>
 
                 <!-- WhatsApp quick link -->
-                <a href="https://wa.me/2347077705842?text=Hi%20Samuel%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+                <a href="https://wa.me/2347077705842?text=Hi%20G5%20Multimedia%20Agency%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
                     target="_blank" rel="noopener noreferrer"
                     class="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-green-600/80 hover:bg-green-600 text-white font-bold border border-green-500/50 transition-all hover:scale-[1.02] shadow-lg shadow-green-500/20">
                     <i class="mdi mdi-whatsapp text-xl"></i>
